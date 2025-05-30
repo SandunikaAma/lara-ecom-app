@@ -11,3 +11,7 @@ COPY . .
 EXPOSE 3007
 
 CMD ["node", "server.js"]
+
+COPY wait-for-it.sh /wait-for-it.sh
+ENTRYPOINT ["/wait-for-it.sh", "mysql", "npm", "start"]
+
