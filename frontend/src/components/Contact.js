@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://13.127.78.245:3007/api/contact/send', formData);
+      await axios.post('http://65.1.112.65:3007/api/contact/send', formData);
       setSubmitted(true);
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {

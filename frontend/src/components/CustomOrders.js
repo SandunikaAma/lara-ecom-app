@@ -8,7 +8,7 @@ const CustomOrders = () => {
   const [editingId, setEditingId] = useState(null);
 
   const fetchOrders = async () => {
-    const res = await axios.get("http://13.127.78.245:3007/api/orders");
+    const res = await axios.get("http://localhost:3007/api/orders");
     setOrders(res.data);
   };
 
@@ -23,10 +23,10 @@ const CustomOrders = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editingId) {
-      await axios.put(`http://13.127.78.245:3007/api/orders/${editingId}`, formData);
+      await axios.put(`http://65.1.112.65:3007/api/orders/${editingId}`, formData);
       setEditingId(null);
     } else {
-      await axios.post("http://13.127.78.245:3007/api/orders", formData);
+      await axios.post("http://65.1.112.65:3007/api/orders", formData);
     }
     setFormData({ name: "", email: "", order: "" });
     fetchOrders();
@@ -42,7 +42,7 @@ const CustomOrders = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://13.127.78.245:3007/api/orders/${id}`);
+    await axios.delete(`http://65.1.112.65:3007/api/orders/${id}`);
     fetchOrders();
   };
 
