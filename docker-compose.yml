@@ -6,7 +6,7 @@ services:
     environment:
       - DB_HOST=mysql
       - DB_USER=root
-      - DB_PASSWORD=SANdatabase7$
+      - DB_PASSWORD=SANdatabase7$$
       - DB_NAME=lara_store
     depends_on:
       - mysql
@@ -23,7 +23,7 @@ services:
     platform: linux/amd64
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: SANdatabase7$
+      MYSQL_ROOT_PASSWORD: SANdatabase7$$
       MYSQL_DATABASE: lara_store
     ports:
       - "3306:3306"
