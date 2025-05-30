@@ -22,7 +22,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:3007/api/auth/login', formData);
+      const res = await axios.post('http://13.127.78.245:3007/api/auth/login', formData);
       setMsg(res.data.message);
       alert("Login successful!");
     } catch (err) {
