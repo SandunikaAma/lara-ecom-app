@@ -10,6 +10,8 @@ services:
       - DB_NAME=lara_store
     depends_on:
       - mysql
+    command:
+      ["/wait-for-it.sh", "mysql:3306", "--", "node", "server.js"]
 
   frontend:
     build: ./frontend
