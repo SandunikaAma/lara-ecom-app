@@ -1,6 +1,9 @@
 # Backend Dockerfile
 FROM node:18
 
+# Install netcat for wait-for-it.sh
+RUN apt-get update && apt-get install -y netcat
+
 WORKDIR /app
 
 COPY package*.json ./
