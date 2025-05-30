@@ -1,6 +1,6 @@
 const mysql = require('mysql2');
 const db=mysql.createConnection({
-    host:'localhost',
+    host:'mysql',
     user:'root',
     password:'SANdatabase7$',
     database:'lara_store'
